@@ -1,0 +1,161 @@
+.container {
+  display: grid;
+  grid-template-rows: 12rem 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "hd hd logo logo"
+    "con1 con1 con2 con2"
+    "vid vid map map"
+    "ft ft ft ft";
+   color: rgb(5,79,148) 
+} 
+.header {
+  background-color: rgb(5, 79, 148);
+  grid-area: hd;
+  display: flex;
+  border: solid;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.logo {
+  grid-area: logo;
+  display: flex;
+  background-color: rgb(5 , 79, 148);
+  align-items: center;
+  justify-content: center;
+}
+.content1 {
+  grid-area: con1;
+  border: solid;
+  color: black;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+h2 {
+  color: black;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+.content2 {
+  grid-area: con2;
+  border: solid;
+  color: black;
+}
+.lineup {
+  grid-area: 4 / 5;
+}
+.video {
+  grid-area: vid;
+  border: solid;
+  background-color: rgb(5 , 79, 148);
+  border-color: white;
+}
+.video-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.video-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.video-container-4x3 {
+  padding-top: 75%;
+}
+.map {
+  grid-area: map;
+  border: solid;
+  background-color: rgb(5 , 79, 148);
+  border-color: white;
+}
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.iframe-container-4x3 {
+  padding-top: 75%;
+}
+.footer {
+  grid-area: ft;
+  border: solid;
+  border-color: white;
+  background-color: rgb(5, 79, 148);
+  display: flex;
+  justify-content: space-around;
+}
+.mlb {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.address {
+  color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+  background-color: rgb(5 , 79, 148);
+}
+li a {
+  display: block;
+  width: 100px;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+  border: solid black 1px;
+}
+li a:hover {
+  background-color: grey;
+  color: white;
+}
+.button-link {
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(5 , 79, 148);
+  border: none;
+}
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 11px;
+  }
+
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 11px;
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  * {
+    width: 100%
+  }
